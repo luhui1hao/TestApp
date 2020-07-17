@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".home.view.activity.HomeActivity">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnablePreviewInEditMode="false">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/qb_px_40">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/qb_px_20"
+                    android:layout_marginRight="@dimen/qb_px_20"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:id="@+id/ll_scan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/ll_pay"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="@dimen/qb_px_45"
+                            android:layout_height="@dimen/qb_px_45"
+                            android:background="@drawable/shape_corner_blue"
+                            android:padding="@dimen/qb_px_8"
+                            android:src="@drawable/ic_scan" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/qb_px_3"
+                            android:text="@string/home_scan"
+                            android:textColor="@color/common_text_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_pay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/ll_scan"
+                        app:layout_constraintRight_toLeftOf="@id/ll_transfer"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="@dimen/qb_px_45"
+                            android:layout_height="@dimen/qb_px_45"
+                            android:background="@drawable/shape_corner_blue"
+                            android:padding="@dimen/qb_px_8"
+                            android:src="@drawable/ic_pay" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/qb_px_3"
+                            android:text="@string/home_pay"
+                            android:textColor="@color/common_text_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_transfer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/ll_pay"
+                        app:layout_constraintRight_toLeftOf="@id/ll_account"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="@dimen/qb_px_45"
+                            android:layout_height="@dimen/qb_px_45"
+                            android:background="@drawable/shape_corner_blue"
+                            android:padding="@dimen/qb_px_8"
+                            android:src="@drawable/ic_transfer" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/qb_px_3"
+                            android:text="@string/home_transfer"
+                            android:textColor="@color/common_text_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/ll_transfer"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="@dimen/qb_px_45"
+                            android:layout_height="@dimen/qb_px_45"
+                            android:background="@drawable/shape_corner_blue"
+                            android:padding="@dimen/qb_px_8"
+                            android:src="@drawable/ic_account" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/qb_px_3"
+                            android:text="@string/home_account"
+                            android:textColor="@color/common_text_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.zhpan.bannerview.BannerViewPager
+                    android:id="@+id/banner_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/qb_px_100"
+                    android:layout_marginLeft="@dimen/qb_px_10"
+                    android:layout_marginTop="@dimen/qb_px_20"
+                    android:layout_marginRight="@dimen/qb_px_10"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/qb_px_10"
+                    android:layout_marginTop="@dimen/qb_px_20"
+                    android:layout_marginRight="@dimen/qb_px_10"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/home_recommend"
+                        android:textColor="@color/common_text_color"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_more"
+                        android:textColor="@color/gray"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_fund"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/qb_px_10"
+                    android:layout_marginTop="@dimen/qb_px_20"
+                    android:layout_marginRight="@dimen/qb_px_10" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_news"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/qb_px_10"
+                    android:layout_marginTop="@dimen/qb_px_20"
+                    android:layout_marginRight="@dimen/qb_px_10" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

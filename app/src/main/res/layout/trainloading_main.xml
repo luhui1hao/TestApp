@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/background"
+    android:layout_width="@dimen/qb_px_100"
+    android:layout_height="@dimen/qb_px_100">
+
+    <RelativeLayout
+        android:layout_width="@dimen/qb_px_60"
+        android:layout_height="@dimen/qb_px_60"
+        android:background="@drawable/train_loading_background"
+        android:layout_centerInParent="true">
+
+        <luhui1hao.xyz.testapp.common.widget.loadingview.ShimmerLayout
+            android:id="@+id/shimmer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:shimmer_animation_duration="2000"
+            android:layout_centerInParent="true"
+            app:shimmer_angle="0"
+            app:shimmer_color="#00C6C6"
+            app:shimmer_mask_width="1"
+            app:shimmer_gradient_center_color_width="0.1">
+
+            <ImageView
+                android:id="@+id/img_train"
+                android:src="@drawable/img_loading_train"
+                android:layout_width="@dimen/qb_px_30"
+                android:layout_height="@dimen/qb_px_30"/>
+        </luhui1hao.xyz.testapp.common.widget.loadingview.ShimmerLayout>
+    </RelativeLayout>
+
+    <luhui1hao.xyz.testapp.common.widget.loadingview.ArcView
+        android:id="@+id/arc_view"
+        android:layout_centerInParent="true"
+        android:layout_width="@dimen/qb_px_60"
+        android:layout_height="@dimen/qb_px_60"
+        app:color="#00C6C6"
+        app:stroke_width="@dimen/qb_px_2"/>
+</RelativeLayout>

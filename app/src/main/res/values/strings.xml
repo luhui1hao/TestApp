@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TestApp</string>
+    <string name="home_recommend">Recommend</string>
+    <string name="home_more">More</string>
+    <string name="home_buy">Buy</string>
+    <string name="home_scan">Scan</string>
+    <string name="home_pay">Pay</string>
+    <string name="home_transfer">Tranfer</string>
+    <string name="home_account">Account</string>
+</resources>
