@@ -99,6 +99,7 @@ public class HomeActivity2 extends BaseActivity implements OnRefreshListener {
             @Override
             public void onChanged(@Nullable HomeData homeData)
             {
+                refreshLayout.finishRefresh();
                 loadData(homeData);
             }
         });
