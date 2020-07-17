@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".home.view.activity.HomeActivity">
+        <!--   HomeActivity  MVP     -->
+        <!--   HomeActivity2 MVVM    -->
+        <activity android:name=".homemvvm.view.HomeActivity2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
